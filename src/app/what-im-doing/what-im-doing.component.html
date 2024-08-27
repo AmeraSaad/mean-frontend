@@ -1,0 +1,17 @@
+<div class="container my-5 shadow-lg">
+  <h3 class="mb-4">What I'm Doing</h3>
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let job of jobs">
+      <div class="card card-custom h-100">
+        <div class="card-body d-flex align-items-center flex-column flex-md-row py-4">
+          <img [src]="job.imageURL" class="card-icon me-md-3 mb-3 mb-md-0" alt="{{job.name}} Icon">
+          <div>
+            <h5 class="card-title">{{job.name}}</h5>
+            <p class="card-text sec-color">{{job.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="custom-line bg-warning m-auto w-50 rounded-2 mb- "></div>

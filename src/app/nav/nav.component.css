@@ -1,0 +1,8 @@
+.nav{
+  background-color: #1f1f1f;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+  border-color: white white #121212;
+}

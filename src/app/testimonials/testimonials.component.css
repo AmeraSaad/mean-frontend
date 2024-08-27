@@ -1,0 +1,28 @@
+.testimonial-card {
+  background-color: #212123;
+  padding: 20px;
+  border-radius: 15px;
+  border-top: 1px solid #535353; 
+  border-left: 1px solid #535353; 
+  color: #ffffff;
+  position: relative;
+  overflow: visible; 
+}
+
+.testimonial-card img {
+  position: absolute;
+  top: -30px; 
+  left: 10%;
+  width: 75px;
+  height: 75px;
+  background-color: #393939;
+}
+
+.testimonial-card .name {
+  position: absolute;
+  left: 30%;
+}
+.testimonial-card .desc {
+  position: relative;
+  left: 5%;
+}

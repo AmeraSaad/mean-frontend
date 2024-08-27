@@ -1,0 +1,40 @@
+/* Custom input and textarea styles */
+.custom-input {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  border: 1px solid #535353;
+  padding: 10px 15px;
+  color: #ffffff;
+}
+
+.custom-input::placeholder {
+  color: #777777;
+}
+
+.custom-input:focus, .custom-input:hover {
+  border-color: #8e5e5e;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Custom button styles */
+.btn-custom {
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  padding: 10px 20px;
+  /* border: 1px solid transparent; */
+}
+
+/* .btn-custom:hover {
+  background-color: #2c2c2c;
+  border-color: #ffd700; 
+} */
+
+
+/* Responsive styles */
+@media (max-width: 767.98px) {
+  .btn-custom {
+    width: 100%;
+    text-align: center;
+  }
+}

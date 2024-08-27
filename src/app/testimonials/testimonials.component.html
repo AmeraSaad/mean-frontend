@@ -1,0 +1,11 @@
+<div class="container my-5 shadow-lg">
+  <h3 class="mt-4">Testimonials</h3>
+  <div class="row mt-5">
+      <div class="col-md-6" *ngFor="let testimonial of testimonials">
+          <div class="testimonial-card mb-5 mb-md-0">
+            <img [src]="testimonial.imageURL" alt="{{testimonial.name}}" class="rounded-3">
+            <h5 class="name ps-5 ps-lg-2">{{testimonial.name}}</h5>
+            <p class="mt-5 mt-lg-4 pt-3 desc sec-color">{{testimonial.description}}</p>
+          </div>
+      </div>
+</div>

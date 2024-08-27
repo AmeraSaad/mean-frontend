@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #121212!important;
+  color: #ffffff;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Poppins', sans-serif;
+}
+h3{
+  font-weight: 700; 
+  Size:24px;
+}
+h5{
+  font-weight: 700; 
+  Size:18px;
+}
+.custom-line {
+  height: 5px;
+  width: 8%;
+}
+
+.sec-color{
+  color: #B9B9B9;
+}
+
+.section {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+

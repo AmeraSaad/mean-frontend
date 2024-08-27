@@ -1,0 +1,40 @@
+<div class="profile-card">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <div class="bgicon rounded-4 mb-4 mt-3">
+      <img [src]="imageURL" alt="Profile Picture">
+    </div>
+    <h3 class="my-3">Richard Hanrick</h3>
+    <p class="title rounded">{{job}}</p>
+  </div>
+  <hr>
+  <ul class="list-unstyled mt-md-4">
+    <li class="d-flex align-items-center m-4">
+      <img [src]="logoLinkedinURL"alt="Profile Picture" class="icon-size me-3">
+      <div>
+        <p class="sec-color fs-6 mb-0">Linkedin</p>
+        <p class="mb-0">{{linkedin}}</p>
+      </div>
+    </li>
+    <li class="d-flex align-items-center m-4">
+      <img [src]="logoEmailURL"alt="Profile Picture" class="icon-size me-3">
+      <div>
+        <p class="sec-color fs-6 mb-0">Email</p>
+        <p class="mb-0">{{email}}</p>
+      </div>
+    </li>
+    <li class="d-flex align-items-center m-4">
+      <img [src]="logoPhoneURL"alt="Profile Picture" class="icon-size me-3">
+      <div>
+        <p class="sec-color fs-6 mb-0">Phone</p>
+        <p class="mb-0">{{phone}}</p>
+      </div>
+    </li>
+    <li class="d-flex align-items-center m-4">
+      <img [src]="logoLocationURL"alt="Profile Picture" class="icon-size me-3">
+      <div>
+        <p class="sec-color fs-6 mb-0">Location</p>
+        <p class="mb-0">{{location}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
