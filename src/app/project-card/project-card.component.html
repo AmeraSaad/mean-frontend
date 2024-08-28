@@ -1,15 +1,22 @@
-<div class="card shadow" style="width: 18rem;" >
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{ project.name }}</h5>
-    <p class="card-text">{{ project.summary }}</p>
-    <button class="btn btn-primary">View More</button>
-  </div>
-  <div class="card-footer">
-    <div class="d-flex flex-wrap justify-content-center">
-      <div *ngFor="let tag of project.tags">
-        <div class="tag me-2 mb-1">{{ tag }}</div>
-      </div>
+<div class="card bg-dark text-light border-0 shadow-sm rounded-4">
+  <div class="card-img-top position-relative">
+    <img [src]="project.picture" alt="{{ project.title }}" class="w-100 h-100 rounded-top">
+    <div class="overlay">
+      <a [href]="project.liveUrl" target="_blank">
+        <i class="fas fa-external-link-alt text-dark "></i>
+      </a>
     </div>
+  </div>
+  <div class="card-body mb-0">
+    <h5 class="card-title">{{ project.title }}</h5>
+    <p class="sec-color mb-0">{{ project.description }}</p>
+  </div>
+  <hr class="mt-0">
+  <div class="card-footer">
+    <ul class="list-inline">
+      <li class="list-inline-item" *ngFor="let tech of project.technologies">
+        <span class="sec-color">{{ tech }}</span>
+      </li>
+    </ul>
   </div>
 </div>

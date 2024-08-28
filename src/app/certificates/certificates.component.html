@@ -1,4 +1,28 @@
 <div class="section rounded-bottom py-3 px-4">
-  <h2>certificates</h2>
+  <h2>My Certificates</h2>
   <div class="custom-line bg-warning rounded-2 mt-2"></div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let certificate of certificates">
+        <div class="card text-light border-0 shadow-sm">
+          <div class="card-img-top position-relative rounded-4">
+            <img [src]="certificate.certificateUrl" class="card-img-top rounded" alt="certificate Image">
+            <div class="overlay">
+              <a [href]="certificate.certificateUrl" target="_blank">
+                <i class="fas fa-external-link-alt text-dark"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{certificate.title }}</h5>
+            <p class="sec-color">{{ certificate.issuer}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
 </div>
+

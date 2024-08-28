@@ -1,0 +1,40 @@
+.card{
+  background-color: #1f1f1f;
+  height: 100%; 
+}
+
+.card-img-top {
+  height: 200px; 
+  position: relative;
+  overflow: hidden;
+}
+.card-img-top img {
+  object-fit: fill;
+
+}
+.card-img-top:hover img {
+  transform: scale(1.1); 
+  transition: transform 0.6s ease;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay i {
+  font-size: 2rem;
+}
+
+.card-img-top:hover .overlay {
+  opacity: 1;
+}

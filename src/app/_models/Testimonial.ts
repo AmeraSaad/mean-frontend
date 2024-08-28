@@ -1,6 +1,6 @@
 export interface Testimonial{
   id:number;
-  Experience:string;
+  // Experience:string;
   image:string;
   description:string;
 }

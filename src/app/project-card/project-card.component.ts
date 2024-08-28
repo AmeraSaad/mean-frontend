@@ -8,4 +8,11 @@ import { Project } from '../_models/Project';
 })
 export class ProjectCardComponent {
   @Input() project={} as Project;  
+
+  onProjectClick(project: any) {
+  
+    if (project && project.liveUrl) {
+      window.open(project.liveUrl, '_blank');
+    }
+  }
 }

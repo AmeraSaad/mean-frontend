@@ -1,9 +1,10 @@
-export interface Project{
-  id:number;
-  name:string;
-  summary:string;
-  description:string;
-  projectLink:string;
-  pictures:string[];
-  tags:string[];
+export interface Project {
+  _id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  repositoryUrl: string;
+  liveUrl: string;
+  picture: string;
+  dateCreated: Date;
 }

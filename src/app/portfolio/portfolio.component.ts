@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProjectCardComponent } from "../project-card/project-card.component";
 import { Project } from '../_models/Project';
+import { ProjectService } from '../services/project.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,14 +10,22 @@ import { Project } from '../_models/Project';
   styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent {
-  constructor(private titleService: Title) {
-    this.titleService.setTitle('Richard  - Portfolio');
+  projects: Project[] = [];
+
+  constructor(private projectService: ProjectService) { }
+
+  ngOnInit(): void {
+    this.loadProjects();
   }
 
-  projects:Project[] = [
-    {id:0,name:'Project 1',summary:'Test Description',description:'',projectLink:'',tags:['Angular','Node.js'],pictures:[]},
-    {id:1,name:'Project 2',summary:'Test Description',description:'',projectLink:'',tags:['Angular','Node.js'],pictures:[]},
-    {id:2,name:'Project 3',summary:'Test Description',description:'',projectLink:'',tags:['Angular','Node.js'],pictures:[]},
-    {id:3,name:'Project 4',summary:'Test Description',description:'',projectLink:'',tags:['Angular','Node.js'],pictures:[]}
-  ]
+  loadProjects(): void {
+    this.projectService.getProjects().subscribe(
+      (data: Project[]) => {
+        this.projects = data;
+      },
+      error => {
+        console.error('Error fetching projects:', error);
+      }
+    );
+  }
 }

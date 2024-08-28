@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { BlogComponent } from './blog/blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProjectService } from './services/project.service';
+import { CertificateService } from './services/certificate.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +40,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent]
 })
 export class AppModule {
