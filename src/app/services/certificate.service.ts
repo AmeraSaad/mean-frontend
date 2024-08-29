@@ -12,7 +12,6 @@ export class CertificateService {
   constructor(private http: HttpClient) {}
 
   getCertificates(): Observable<Certificate[]> {
-    console.log('testtttt')
     return this.http.get<Certificate[]>(this.apiUrl);
   }
 }

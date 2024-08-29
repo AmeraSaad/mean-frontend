@@ -1,0 +1,37 @@
+.resume-header {
+  margin-bottom: 2rem;
+}
+
+.resume-header h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.resume-header h4 {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h5 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background-color: #343a40;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 4px;
+}

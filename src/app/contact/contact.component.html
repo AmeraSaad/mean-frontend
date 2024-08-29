@@ -1,32 +1,48 @@
 <div class="section rounded-bottom py-3 px-4">
   <h2>Contact Form</h2>
   <div class="custom-line bg-warning rounded-2 mt-2"></div>
-  <form>
+  
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="row my-5">
       <div class="col-md-6 mb-4">
         <div class="form-group">
-          <input type="text" class="form-control custom-input" placeholder="Full name">
+          <input type="text" formControlName="fullName" class="form-control custom-input" placeholder="Full name">
+          <div *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched" class="p-2 my-pink">
+            Full name is required and must be at least 3 characters long.
+          </div>
         </div>
       </div>
       <div class="col-md-6 mb-4">
         <div class="form-group">
-          <input type="email" class="form-control custom-input" placeholder="Email address">
+          <input type="email" formControlName="email" class="form-control custom-input" placeholder="Email address">
+          <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="p-2 my-pink">
+            Please enter a valid email address.
+          </div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="url" class="form-control custom-input" placeholder="LinkedIn URL">
+          <input type="url" formControlName="linkedInUrl" class="form-control custom-input" placeholder="LinkedIn URL">
+          <div *ngIf="contactForm.get('linkedInUrl')?.invalid && contactForm.get('linkedInUrl')?.touched" class="p-2 my-pink">
+            Please enter a valid LinkedIn URL.
+          </div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="tel" class="form-control custom-input" placeholder="Phone NO." >
+          <input type="tel" formControlName="phoneNo" class="form-control custom-input" placeholder="Phone NO.">
+          <div *ngIf="contactForm.get('phoneNo')?.invalid && contactForm.get('phoneNo')?.touched" class="p-2 my-pink">
+            Please enter a valid phone number.
+          </div>
         </div>
       </div>
     </div>
     <div class="form-group mb-3">
-      <textarea class="form-control custom-input" rows="5" placeholder="Your Message"></textarea>
+      <textarea formControlName="message" class="form-control custom-input" rows="5" placeholder="Your Message"></textarea>
+      <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="p-2 my-pink">
+        Message is required and must be at least 10 characters long.
+      </div>
     </div>
-    <button type="submit" class="btn btn-custom text-warning mt-3"> Send Message </button>
+    <button type="submit" class="btn btn-custom text-warning mt-3" [disabled]="contactForm.invalid"> Send Message </button>
   </form>
 </div>

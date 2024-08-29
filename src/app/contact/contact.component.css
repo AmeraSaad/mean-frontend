@@ -1,4 +1,8 @@
 /* Custom input and textarea styles */
+.my-pink{
+  color:#8e5e5e;
+}
+
 .custom-input {
   background-color: #1f1f1f;
   border-radius: 10px;
