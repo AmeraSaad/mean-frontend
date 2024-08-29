@@ -1,18 +1,9 @@
-export interface Resume {
-  name: string;
-  title: string;
-  summary?: string;
-  experience: Experience[];
-  education: Education[];
-  skills: string[];
-}
-
 export interface Experience {
   company: string;
   position: string;
   startDate: Date;
   endDate: Date;
-  description?: string;
+  description: string;
 }
 
 export interface Education {
@@ -21,4 +12,13 @@ export interface Education {
   fieldOfStudy: string;
   startDate: Date;
   endDate: Date;
+}
+
+export interface Resume {
+  name: string;
+  title: string;
+  summary: string;
+  experience: Experience[];
+  education: Education[];
+  skills: string[];
 }

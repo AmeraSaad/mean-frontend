@@ -19,6 +19,7 @@ import { BlogComponent } from './blog/blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectService } from './services/project.service';
 import { CertificateService } from './services/certificate.service';
+import { ResumeService } from './services/resume.service';
 
 @NgModule({
   declarations: [

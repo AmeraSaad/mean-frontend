@@ -16,8 +16,14 @@ export class ResumeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.resumeService.getResume().subscribe(data => {
-      this.resume = data;
+    this.resumeService.getResume().subscribe({
+      next: (data) => {
+        this.resume = data;
+      },
+      error: (err) => {
+        console.error('Error fetching resume data:', err);
+      }
     });
   }
+  
 }

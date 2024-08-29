@@ -1,34 +1,35 @@
 <div class="section rounded-bottom py-3 px-4">
-  <h2>Resume</h2>
+  <h2>My Resume</h2>
   <div class="custom-line bg-warning rounded-2 mt-2"></div>
 
   <div *ngIf="resume">
-    <div class="resume-header">
-      <h3>{{ resume.name }}</h3>
-      <h4>{{ resume.title }}</h4>
-      <p>{{ resume.summary }}</p>
+    <div class="resume-header pt-4">
+      <p class="sec-color">{{ resume.summary }}</p>
     </div>
 
     <div class="resume-section">
-      <h5>Experience</h5>
+      <h5 class="mb-2">Experience</h5>
+      <div class="custom-line bg-warning rounded-2 mb-4"></div>
       <div *ngFor="let exp of resume.experience" class="mb-4">
-        <h6>{{ exp.position }} - {{ exp.company }}</h6>
-        <small>{{ exp.startDate | date: 'MMM yyyy' }} - {{ exp.endDate | date: 'MMM yyyy' }}</small>
-        <p>{{ exp.description }}</p>
+        <h6>• {{ exp.position }} - {{ exp.company }}</h6>
+        <small class="text-warning px-3">{{ exp.startDate | date: 'MMM yyyy' }} - {{ exp.endDate | date: 'MMM yyyy' }}</small>
+        <p class="sec-color px-3">{{ exp.description }}</p>
       </div>
     </div>
-
+    
     <div class="resume-section">
-      <h5>Education</h5>
+      <h5 class="mb-2">Education</h5>
+      <div class="custom-line bg-warning rounded-2 mb-4"></div>
       <div *ngFor="let edu of resume.education" class="mb-4">
         <h6>{{ edu.degree }} in {{ edu.fieldOfStudy }}</h6>
-        <small>{{ edu.institution }}</small><br>
-        <small>{{ edu.startDate | date: 'MMM yyyy' }} - {{ edu.endDate | date: 'MMM yyyy' }}</small>
+        <small class="text-warning px-3">{{ edu.startDate | date: 'MMM yyyy' }} - {{ edu.endDate | date: 'MMM yyyy' }}</small>
+        <small class="px-3">{{ edu.institution }}</small><br>
       </div>
     </div>
 
     <div class="resume-section">
       <h5>Skills</h5>
+      <div class="custom-line bg-warning rounded-2 mb-4"></div>
       <ul class="skills-list">
         <li *ngFor="let skill of resume.skills">{{ skill }}</li>
       </ul>
